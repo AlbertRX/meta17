@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- 表单视图 -->
+  <record id="view_product_catalog_form" model="ir.ui.view">
+    <field name="name">product_catalog.form(产品目录表单视图)</field>
+    <field name="model">product_catalog_management.product_catalog</field>
+    <field name="arch" type="xml">
+      <form string="产品目录">
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name" placeholder="产品名称"/>
+            </h1>
+            <field name="reference_code" placeholder="内部编码"/>
+            <notebook>
+              <page name="components" string="组件">
+                <!-- 产品组件多对多树 -->
+                <field name="product_component_ids" placeholder="产品组件">
+                  <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="description"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page name="alias" string="别名">
+                <field name="product_alias_ids" placeholder="别名">
+                  <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="description"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+
+
+
+          </div>
+          <group>
+            <field name="description" placeholder="描述"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- 树视图 -->
+
+  <record id="view_product_catalog_tree" model="ir.ui.view">
+    <field name="name">product_catalog.tree(产品目录列表视图)</field>
+    <field name="model">product_catalog_management.product_catalog</field>
+    <field name="arch" type="xml">
+      <tree string="产品目录">
+        <field name="name"/>
+        <field name="reference_code"/>
+        <field name="description"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

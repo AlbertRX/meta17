@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+
+
+    <!-- 根菜单 -->
+    <menuitem id="menu_product_catalog_management" name="产品目录管理" sequence="10" />
+
+    <!-- 二级菜单 -->
+    <menuitem id="menu_product_catalog" name="产品目录" parent="menu_product_catalog_management" action="action_product_catalog" sequence="10" />
+    <menuitem id="menu_product_component" name="产品组件" parent="menu_product_catalog_management" action="action_product_component" sequence="20" />
+    <menuitem id="menu_product_alias" name="产品别名" parent="menu_product_catalog_management" action="action_product_alias" sequence="30"/>
+</odoo>

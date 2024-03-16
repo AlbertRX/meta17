@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_product_catalog" model="ir.actions.act_window">
+        <field name="name">产品目录</field>
+        <field name="res_model">product_catalog_management.product_catalog</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                在这里创建你的产品目录。
+            </p>
+        </field>
+    </record>
+
+
+    <!-- 产品组件动作 -->
+    <record id="action_product_component" model="ir.actions.act_window">
+        <field name="name">产品组件</field>
+        <field name="res_model">product_catalog_management.product_component</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                在这里创建你的产品组件。
+            </p>
+        </field>
+    </record>
+
+
+    <!-- 产品别名动作 -->
+    <record id="action_product_alias" model="ir.actions.act_window">
+        <field name="name">产品别名</field>
+        <field name="res_model">product_catalog_management.product_alias</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                在这里创建你的产品别名。
+            </p>
+        </field>
+    </record>
+
+
+</odoo>
