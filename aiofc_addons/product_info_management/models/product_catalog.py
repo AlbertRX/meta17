@@ -17,3 +17,6 @@ class product_catalog(models.Model):
 
     product_ids = fields.One2many(
         'product_info_management.product_base_info', 'product_catalog_id', string='产品')
+
+    article_id = fields.Many2one(
+        'product_info_management.catalog_article', string='文章')

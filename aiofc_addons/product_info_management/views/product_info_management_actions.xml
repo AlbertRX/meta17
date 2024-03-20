@@ -12,7 +12,31 @@
     </record>
 
 
-    
+    <record id="action_product_base_info" model="ir.actions.act_window">
+        <field name="name">产品基本信息</field>
+        <field name="res_model">product_info_management.product_base_info</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                在这里创建你的产品。
+            </p>
+        </field>
+    </record>
+
+    <record id="action_catalog_article" model="ir.actions.act_window">
+        <field name="name">文章</field>
+        <field name="res_model">product_info_management.catalog_article</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                在这里创建你的文章。
+            </p>
+        </field>
+    </record>
+
+
+
+
 
 
 

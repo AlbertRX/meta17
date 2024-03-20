@@ -6,8 +6,10 @@
 
 
     <!-- 根菜单 -->
-    <menuitem id="menu_product_catalog_management" name="产品目录管理" sequence="10" />
+    <menuitem id="menu_product_catalog_management" name="产品信息管理" sequence="10" />
 
     <!-- 二级菜单 -->
     <menuitem id="menu_product_catalog" name="产品目录" parent="menu_product_catalog_management" action="action_product_catalog" sequence="10" />
+    <menuitem id="menu_product_base_info" name="产品基本信息" parent="menu_product_catalog_management" action="action_product_base_info" sequence="20" />
+    <menuitem id="menu_catalog_article" name="文章" parent="menu_product_catalog_management" action="action_catalog_article" sequence="30" />
 </odoo>
