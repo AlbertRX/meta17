@@ -20,3 +20,5 @@ class product_catalog(models.Model):
 
     article_id = fields.Many2one(
         'product_info_management.catalog_article', string='文章')
+    
+    

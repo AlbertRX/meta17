@@ -9,6 +9,7 @@ class product_base_info(models.Model):
     name = fields.Char(string='产品名称', required=True)
     sku = fields.Char(string='产品SKU', required=True)
     barcode = fields.Char(string='产品条码')
-    default_code = fields.Char(string='产品编码')
     product_catalog_id = fields.Many2one(
         'product_info_management.product_catalog', string='产品目录')
+    product_attribute_line_ids = fields.One2many(
+        'product_info_management.product_attribute_line', 'product_id', string='产品属性列表')
