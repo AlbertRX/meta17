@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "product_catalog_management",
+    'name': "product_info_management",
 
-    'summary': "产品目录管理模块",
+    'summary': "产品信息管理模块",
 
     'description': """
-Long description of module's purpose
+            Long description of module's purpose
     """,
 
     'author': "yfc",
@@ -27,7 +27,7 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'views/product_catalog_views.xml',
-        'views/product_catalog_management_actions.xml',
-        'views/product_catalog_management_menus.xml',
+        'views/product_info_management_actions.xml',
+        'views/product_info_management_menus.xml',
     ],
 }
