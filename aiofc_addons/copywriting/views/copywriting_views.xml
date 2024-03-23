@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+    <record id="copywriting_view_form" model="ir.ui.view">
+      <field name="name">文案写作表单视图</field>
+      <field name="model">copywriting.copywriting</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="title" />
+              <field name="body_data"/>
+              <field name="published"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

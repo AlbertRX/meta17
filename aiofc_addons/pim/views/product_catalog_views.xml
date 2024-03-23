@@ -6,7 +6,7 @@
     <!-- Tree View -->
     <record id="view_product_catalog_tree" model="ir.ui.view">
       <field name="name">产品目录列表视图</field>
-      <field name="model">product_info_management.product_catalog</field>
+      <field name="model">pim.product_catalog</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>

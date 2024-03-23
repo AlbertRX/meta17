@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 根菜单 -->
+    <menuitem id="menu_copywriting" name="文案写作" sequence="10" />
+
+    <!-- 二级菜单 -->
+    <menuitem id="menu_copywriting_copywriting" name="文案写作" parent="menu_copywriting" action="copywriting_action" sequence="10" />
+
+
+</odoo>

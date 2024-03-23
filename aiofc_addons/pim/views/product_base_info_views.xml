@@ -6,7 +6,7 @@
         <!-- form view -->
         <record id="view_product_base_info_form" model="ir.ui.view">
             <field name="name">产品基本信息表单视图</field>
-            <field name="model">product_info_management.product_base_info</field>
+            <field name="model">pim.product_base_info</field>
             <field name="arch" type="xml">
                 <form string="产品基本信息">
                     <group>
