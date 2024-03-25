@@ -4,7 +4,9 @@
     <menuitem id="menu_copywriting" name="文案写作" sequence="10" />
 
     <!-- 二级菜单 -->
-    <menuitem id="menu_copywriting_copywriting" name="文案写作" parent="menu_copywriting" action="copywriting_action" sequence="10" />
+    <menuitem id="menu_copywriting_article" name="文案写作" parent="menu_copywriting" action="article_action" sequence="10" />
+
+    <menuitem id="menu_copywriting_article_collect" name="书籍" parent="menu_copywriting" action="article_collect_action" sequence="20" />
 
 
 </odoo>

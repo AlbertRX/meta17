@@ -1,8 +1,8 @@
 <odoo>
   <data>
-    <record id="copywriting_view_form" model="ir.ui.view">
+    <record id="copywriting_article_view_form" model="ir.ui.view">
       <field name="name">文案写作表单视图</field>
-      <field name="model">copywriting.copywriting</field>
+      <field name="model">copywriting.article</field>
       <field name="arch" type="xml">
         <form>
           <sheet>

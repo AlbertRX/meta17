@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_copywriting_copywriting_user,copywriting.copywriting.copywriting,model_copywriting_copywriting,base.group_user,1,1,1,1
+access_copywriting_article_user,copywriting.copywriting.article,model_copywriting_article,base.group_user,1,1,1,1
+access_copywriting_article_collect_user,copywriting.copywriting.article_collect,model_copywriting_article_collect,base.group_user,1,1,1,1
+access_copywriting_article_category_user,copywriting.copywriting.article_category,model_copywriting_article_category,base.group_user,1,1,1,1
