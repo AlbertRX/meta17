@@ -1,7 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_pim_product_catalog_user,pim.pim.product_catalog,model_pim_product_catalog,base.group_user,1,1,1,1
-access_pim_product_base_info_user,pim.pim.product_base_info,model_pim_product_base_info,base.group_user,1,1,1,1
-access_pim_product_attribute_user,pim.pim.product_attribute,model_pim_product_attribute,base.group_user,1,1,1,1
-access_pim_product_attribute_value_user,pim.pim.product_attribute_value,model_pim_product_attribute_value,base.group_user,1,1,1,1
-access_pim_product_attribute_line_user,pim.pim.product_attribute_line,model_pim_product_attribute_line,base.group_user,1,1,1,1
-access_pim_catalog_article_user,pim.pim.catalog_article,model_pim_catalog_article,base.group_user,1,1,1,1
+access_pim_attribute_user,pim.pim.attribute,model_pim_attribute,base.group_user,1,1,1,1
+access_pim_attribute_group_user,pim.pim.attribute_group,model_pim_attribute_group,base.group_user,1,1,1,1
+access_pim_attribute_tab_user,pim.pim.attribute_tab,model_pim_attribute_tab,base.group_user,1,1,1,1

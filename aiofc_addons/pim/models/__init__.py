@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from . import product_catalog
+from . import attribute
 
-from . import product_base_info
+from . import attribute_group
 
-from . import catalog_article
-
-from . import product_attribute
-
-from . import product_attribute_value
-
-from . import product_attribute_line
+from . import attribute_tab
