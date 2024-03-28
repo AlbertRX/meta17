@@ -7,7 +7,23 @@ class attribute(models.Model):
 
     name = fields.Char(string='属性名称', required=True)
 
-    type = fields.Char(string='属性类型')
+    type = fields.Selection(string='属性类型', selection=[
+        ('text', '文本'),
+        ('float', '浮点'),
+        ('float_range', '浮点范围'),
+        ('int', '整数'),
+        ('int_range', '整数范围'),
+        ('array', '数组'),
+        ('bool', '布尔'),
+        ('asset', '资产'),
+        ('date', '日期'),
+        ('datetime', '日期时间'),
+        ('list', '列表'),
+        ('multi_value_list', '多值列表'),
+        ('url', 'URL'),
+        ('string', '字符串'),
+        ('html', 'HTML'),
+    ])
 
     attribute_group_id = fields.Char(string='属性组', size=24)
 
@@ -29,13 +45,13 @@ class attribute(models.Model):
 
     prohibited_empty_value = fields.Boolean(string='禁止空值')
 
-    data = fields.Text(string='数据')
+    data = fields.Json(string='数据')
 
     virtual_product_field = fields.Boolean(string='虚拟产品字段')
 
     is_required = fields.Boolean(string='必填')
 
-    sort_order = fields.Integer(string='排序',default=0)
+    sort_order = fields.Integer(string='排序', default=0)
 
     default_channel_id = fields.Char(string='默认渠道', size=24)
 

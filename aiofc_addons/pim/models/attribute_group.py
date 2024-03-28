@@ -20,3 +20,11 @@ class attribute_group(models.Model):
     code = fields.Char(string='属性组编码', size=255)
 
     owner_user_id = fields.Char(string='拥有者', size=24)
+
+    company_id = fields.Many2one(
+        'res.company', string='Company', default=lambda self: self.env.company)
+
+    _sql_constraints = [
+        ('name_company_uniq', 'unique(name, company_id)',
+         'The name of the job position must be unique per department in company!')
+    ]
