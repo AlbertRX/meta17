@@ -4,3 +4,6 @@ access_pim_attribute_group_user,pim.pim.attribute_group,model_pim_attribute_grou
 access_pim_attribute_tab_user,pim.pim.attribute_tab,model_pim_attribute_tab,base.group_user,1,1,1,1
 access_pim_product_user,pim.pim.product,model_pim_product,base.group_user,1,1,1,1
 access_pim_product_attribute_value_user,pim.pim.product_attribute_value,model_pim_product_attribute_value,base.group_user,1,1,1,1
+access_pim_catalog_user,pim.pim.catalog,model_pim_catalog,base.group_user,1,1,1,1
+access_pim_category_user,pim.pim.category,model_pim_category,base.group_user,1,1,1,1
+access_pim_catalog_category_user,pim.pim.catalog_category,model_pim_catalog_category,base.group_user,1,1,1,1
