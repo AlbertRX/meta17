@@ -1,22 +1,31 @@
 # -*- coding: utf-8 -*-
-# from odoo import http
+
+from datetime import date, datetime
+import json
+from odoo import http
+from odoo.http import Response, request
 
 
-# class ProductCategoryManagement(http.Controller):
-#     @http.route('/product_category_management/product_category_management', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class CustomJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, (datetime, date)):
+            return obj.isoformat()
+        return super().default(obj)
 
-#     @http.route('/product_category_management/product_category_management/objects', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('product_category_management.listing', {
-#             'root': '/product_category_management/product_category_management',
-#             'objects': http.request.env['product_category_management.product_category_management'].search([]),
-#         })
 
-#     @http.route('/product_category_management/product_category_management/objects/<model("product_category_management.product_category_management"):obj>', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('product_category_management.object', {
-#             'object': obj
-#         })
+class PimController(http.Controller):
 
+    @http.route('/get_attribute_data', auth='public', type='http', methods=['GET'])
+    def get_attribute_data(self):
+        attribute_groups = request.env['pim.attribute_group'].search_read([], [
+        ])
+        attributes = request.env['pim.attribute'].search_read([], [])
+        attribute_tabs = request.env['pim.attribute_tab'].search_read([], [])
+
+        attribute_data = {
+            'attribute_groups': attribute_groups,
+            'attributes': attributes,
+            'attribute_tabs': attribute_tabs
+        }
+
+        return Response(CustomJSONEncoder().encode(attribute_data), headers=[('Content-Type', 'application/json')])
